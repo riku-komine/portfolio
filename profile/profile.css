@@ -1,0 +1,129 @@
+h2{
+    font-family: "Rock Salt", cursive;
+    color: #a8a8a8;
+    text-align: center;
+    font-size: 40px;
+}
+
+.about-me{
+    color: #f5f5f5;
+    text-align: left;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    line-height: 2;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content{
+    display: flex;
+    justify-content:center;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.about-content p{
+    width: 800px;
+    margin-top: 60px;
+}
+
+
+.profile1{
+    width: 300px;
+    height: auto;
+}
+
+/* background */
+.background{
+    color: #f5f5f5;
+    text-align: left;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    line-height: 2;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.bg-content{
+    display: flex;
+    justify-content:center;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.profile2{
+    width: 300px;
+    height: 200px;
+}
+
+/* mindset */
+.mindset p{
+    text-align: left;
+    color: #f5f5f5;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    line-height: 2;
+    margin: 0 auto;
+    width: 750px;
+    position: relative;
+    left: 80px;
+}
+
+@media screen and (max-width: 768px) {
+.mindset {
+    position: relative;
+    left: 225px;
+}
+}
+
+/* foter */
+.profile-footer{
+    text-align: center;
+    padding: 5px 0 40px;
+    margin-top: -280px;
+}
+
+@media screen and (max-width: 768px) {
+.profile-footer{
+    margin-top: -35px;
+    position: relative;
+    left: 220px;
+}
+}
+/* Responsive profile: heading, image, text in natural flow */
+@media screen and (max-width: 768px) {
+body main { display:block; width:100%; padding:35px 20px 60px; }
+body main section { width:100%; max-width:650px; margin:0 auto 70px; position:static; left:auto; top:auto; }
+body main h2 { text-align:center; font-size:clamp(24px,6vw,34px); margin:0 0 28px; }
+.about-content, .bg-content { display:flex; flex-direction:column; align-items:center; gap:24px; width:100%; }
+.about-content .profile1, .bg-content .profile2 { order:0; display:block; position:static; width:min(100%,320px); height:auto; margin:0 auto; }
+.about-content p, .bg-content p { order:1; width:100%; max-width:560px; margin:0; }
+.about-me, .background, .mindset { font-size:14px; line-height:1.9; }
+.mindset p { position:static; left:auto; width:100%; max-width:560px; margin:0 auto; }
+.profile-footer { position:static; left:auto; top:auto; margin:0; padding:0 16px 35px; }
+}
+@media screen and (max-width:440px) {
+body main { display:block; padding:35px 22px 45px; }
+body main section { margin-bottom:60px; }
+.about-content p, .bg-content p, .mindset p { font-size:13px; overflow-wrap:anywhere; }
+.about-content p br, .bg-content p br, .mindset p br { display:none; }
+}
+
+/* Profile-only mobile layout overrides */
+@media (max-width:768px) {
+html,body {margin:0;max-width:100%;overflow-x:clip;box-sizing:border-box;}
+ *,*::before,*::after {box-sizing:border-box;}
+header {gap:12px;}
+header nav {position:static;left:auto;margin:0;}
+main {display:block!important;width:100%!important;max-width:100%;padding:36px 20px 65px!important;}
+main .about-me,main .background,main .mindset {display:block!important;position:static!important;left:auto!important;right:auto!important;top:auto!important;width:100%!important;max-width:620px!important;margin:0 auto 65px!important;min-width:0!important;}
+main h2 {position:static!important;left:auto!important;width:100%!important;max-width:100%;text-align:center;font-size:clamp(22px,5.5vw,32px);overflow-wrap:anywhere;margin:0 0 28px;}
+main .about-content,main .bg-content {display:flex!important;flex-direction:column!important;align-items:center!important;gap:24px;width:100%!important;max-width:100%;}
+main .about-content img {order:0;}
+main .about-content p {order:1;}
+main .about-content img,main .bg-content img {display:block;position:static!important;left:auto!important;width:min(100%,300px)!important;height:auto!important;margin:0 auto!important;}
+main .about-content p,main .bg-content p,main .mindset p {position:static!important;left:auto!important;right:auto!important;width:100%!important;max-width:100%!important;margin:0!important;font-size:14px;line-height:1.9;overflow-wrap:anywhere;}
+main p br {display:none;}
+.profile-footer {position:static!important;left:auto!important;margin:0!important;padding:0 16px 32px!important;text-align:center;}
+}
+@media(max-width:440px) {header {flex-direction:column;align-items:center;gap:0;}header nav {width:100%;}header ul {justify-content:space-around;gap:22px;padding:16px 0;} main {padding:30px 22px 50px!important;} main .about-content p,main .bg-content p,main .mindset p {font-size:13px;} }

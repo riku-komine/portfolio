@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Rock+Salt&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+
+<title>Riku Komine</title>
+</head>
+
+<body>
+    
+    <header>
+        <div class="main-visual fade-trigger">
+            <h1>Riku Komine</h1>
+            <p>Web Designer/Student</p>
+        </div>
+        
+        <nav class="fade-trigger">
+            <ul>
+                <li><a href="profile/index.html">PROFILE</a></li>
+                <li><a href="/works/works.html">WORKS</a></li>
+                <li><a href="./contact/contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <img src="images/aquarium.jpg" alt="" class="top-photo tilt fade-trigger">
+        <img src="images/hokota.webp" alt="" class="second-photo tilt fade-trigger">
+        <img src="images/soccer.JPG" alt="" class="third-photo tilt fade-trigger">
+        <img src="images/atami.jpeg" alt="" class="fourth-photo tilt fade-trigger">
+        <img src="images/ine.webp" alt="" class="fifth-photo tilt fade-trigger">
+        <img src="images/minatomirai.JPG" alt="" class="six-photo tilt fade-trigger">
+        <img src="images/koudaizi.webp" alt="" class="seven-photo tilt fade-trigger">
+        
+    </main>
+
+    <footer class="fade-trigger">
+        <p>&copy;2026 Riku Komine</p>
+    </footer>
+
+<script src="vanilla-tilt.min.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".tilt"));
+</script>
+
+<script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script> 
+<script>
+const lenis = new Lenis({
+duration: 1.5,
+smoothWheel: true,
+});
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+</script>
+
+<script>
+const fadeElements = document.querySelectorAll(".fade-trigger");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in-fwd");
+        observer.unobserve(entry.target);
+    }
+    });
+}, {
+    threshold: 0.2
+});
+
+fadeElements.forEach((element) => {
+    observer.observe(element);
+});
+</script>
+
+</body>
+</html>

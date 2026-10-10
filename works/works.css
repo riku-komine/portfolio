@@ -1,0 +1,25 @@
+.comingsoon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.works-txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+.works-footer{
+    font-family: "Rock Salt", cursive;
+    color: #a8a8a8;
+    text-align: center;
+    top: 70px;
+    left: 0;
+}

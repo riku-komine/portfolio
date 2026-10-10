@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Rock+Salt&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../profile/profile.css">
+<link rel="stylesheet" href="../contact/contact.css">
+<link rel="stylesheet" href="./works.css">
+
+<title>Riku Komine</title>
+</head>
+
+<body>
+    <header>
+        <div class="main-visual fade-trigger">
+            <h1>Riku Komine</h1>
+            <p>Web Designer/Student</p>
+        </div>
+        
+        <nav class="fade-trigger">
+            <ul>
+                <li><a href="profile/index.html">PROFILE</a></li>
+                <li><a href="../index.html">TOP</a></li>
+                <li><a href="/contact/contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section class="works-main">
+            <h2>Works</h2>
+            <p class="comingsoon">Coming soon</p>
+            <p class="works-txt">
+                現在、制作実績を準備中です。
+            </p>
+        </section>
+    </main>
+
+    <footer class="works-footer fade-trigger">
+        <p>&copy;2026 Riku Komine</p>
+    </footer>
+    
+    
+</body>
+
+<script src="vanilla-tilt.min.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".tilt"));
+</script>
+
+<script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script> 
+<script>
+const lenis = new Lenis({
+duration: 1.5,
+smoothWheel: true,
+});
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+</script>
+
+<script>
+const fadeElements = document.querySelectorAll(".fade-trigger");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in-fwd");
+        observer.unobserve(entry.target);
+    }
+    });
+}, {
+    threshold: 0.2
+});
+
+fadeElements.forEach((element) => {
+    observer.observe(element);
+});
+</script>
+</html>

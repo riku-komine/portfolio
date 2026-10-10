@@ -1,0 +1,355 @@
+body{
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #4a3932;
+}
+
+@media screen and (max-width: 440px) {
+main{
+    display: flow-root;
+}
+}
+
+.main-visual{
+    font-family: "Rock Salt", cursive;
+    color: #a8a8a8;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 70px;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+.main-visual{
+    padding-top: 20px;
+    padding-left: 35px;
+    font-size: 24px;
+    white-space: nowrap;
+}
+}
+
+@media screen and (max-width: 440px) {
+.main-visual{
+    padding-left: 0;
+    text-align: center;
+}
+}
+
+header p{
+    margin-top: -20px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 0;
+}
+
+@media screen and (max-width: 440px) {
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    gap: 40px;
+    margin: 0;
+    padding: 75px 70px;
+}
+
+@media screen and (max-width: 768px) {
+header ul{
+    gap: 25px;
+    padding: 85px 40px 0 0;
+}
+}
+
+@media screen and (max-width: 440px) {
+header ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 20px 0;
+    list-style: none;
+}
+}
+
+@media screen and (max-width: 768px) {
+header nav{
+    position: relative;
+    left: 300px;
+}
+}
+
+@media screen and (max-width: 440px) {
+header nav{
+    position: static;
+    width: fit-content;
+    margin: 0 auto;
+}
+}
+
+
+a{
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+header a{
+    font-size: 24px;
+}
+}
+
+
+
+/* main */
+.top-photo{
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    margin-left: 600px;
+    margin-top: -50px;
+}
+
+@media screen and (max-width: 768px) {
+.top-photo{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    margin-left: 509px;
+    margin-top: -30px;
+}
+}
+
+.second-photo{
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    position: relative;
+    right: 800px;
+    margin-top: -20px;
+}
+
+@media screen and (max-width: 768px) {
+.second-photo{
+    width: 280px;
+    height: 380px;
+    object-fit: cover;
+    position: relative;
+    top: -300px;
+    left: 80px;
+    
+}
+}
+
+.third-photo{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+    left: 380px;
+    top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+.third-photo{
+    position: relative;
+    left: 100px;
+    top: 40px;
+}
+}
+
+@media screen and (max-width: 440px) {
+    .third-photo{
+        position: relative;
+        left: 410px;
+        top: -270px;
+}
+}
+
+.fourth-photo{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    position: relative;
+    left: 600px;
+    top: 200px;
+}
+
+@media screen and (max-width: 768px) {
+.fourth-photo{
+    position: relative;
+    top: -50px;
+    left: 700px;
+}
+}
+
+@media screen and (max-width: 440px) {
+.fourth-photo{
+    position: relative;
+    top: -385px;
+}
+}
+
+.fifth-photo{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    position: relative;
+    top: 500px;
+    right: 450px;
+}
+
+@media screen and (max-width: 768px) {
+.fifth-photo{
+    position: relative;
+    right: 270px;
+    top: -160px;
+}
+}
+
+@media screen and (max-width: 440px) {
+.fifth-photo{
+    position: relative;
+    right: -60px;
+    top: -725px;
+}
+}
+
+.six-photo{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+    top: 600px;
+    left: 150px;
+}
+
+@media screen and (max-width: 768px) {
+.six-photo{
+    position: relative;
+    top: -30px;
+    left: auto;
+    right: -60px;
+}
+}
+
+@media screen and (max-width: 440px) {
+.six-photo{
+    position: relative;
+    top: -640px; 
+    right: -110px;
+}
+}
+
+.seven-photo{
+    width: 400px;
+    height: 275px;
+    object-fit: cover;
+    position: relative;
+    top: 300px;
+    left: 450px;
+}
+
+@media screen and (max-width: 768px) {
+.seven-photo{
+    position: relative;
+    left: 255px;
+    top: 5px;
+}
+}
+
+@media screen and (max-width: 440px) {
+.seven-photo{
+    position: relative;
+    left: 500px;
+    top: -1000px;
+}
+}
+
+footer{
+    font-family: "Rock Salt", cursive;
+    color: #a8a8a8;
+    text-align: center;
+    position: relative;
+    top: 325px;
+    font-size: 18px;
+    padding-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+footer{
+    position: relative;
+    top: 60px;
+    left: 120px;
+}
+}
+
+@media screen and (max-width: 440px) {
+footer{
+    position: relative;
+    top: 0px;
+    left: 320px;
+    font-size: 24px;
+}
+}
+
+.fade-in-fwd {
+	-webkit-animation: fade-in-fwd 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
+    animation: fade-in-fwd 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) ;
+}
+
+@keyframes fade-in-fwd {
+0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+}
+100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+}
+}
+
+.fade-trigger {
+    opacity: 0;
+}
+
+.fade-trigger.fade-in-fwd {
+    opacity: 1;
+}
+
+/* Smartphone layout: keep elements in document flow instead of offsetting them */
+@media screen and (max-width: 440px) {
+  *, *::before, *::after { box-sizing: border-box; }
+html, body { width: 100%; max-width: 100%; margin: 0; overflow-x: clip; }
+header { display: flex; flex-direction: column; align-items: stretch; gap: 12px; padding: 24px 20px 0; }
+.main-visual { padding: 0; margin: 0; font-size: 15px; white-space: normal; }
+.main-visual h1 { margin: 0; line-height: 1.9; }
+header p { margin: 0; font-size: 12px; }
+header nav { position: static; left: auto; width: 100%; }
+header ul { padding: 12px 0 0; margin: 0; gap: 16px; justify-content: space-around; flex-wrap: wrap; }
+header a { font-size: 12px; }
+main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; column-gap: 16px; row-gap: 28px; padding: 38px 20px 45px; width: 100%; }
+main img.top-photo, main img.second-photo, main img.third-photo,
+main img.fourth-photo, main img.fifth-photo, main img.six-photo,
+main img.seven-photo { display: block; position: static; top: auto; right: auto; bottom: auto; left: auto; margin: 0; max-width: 100%; width: 100%; height: auto; object-fit: cover; }
+main img.top-photo { grid-column: 2; grid-row: 1; aspect-ratio: 3 / 4; margin-top: 0; }
+main img.second-photo { grid-column: 1; grid-row: 1; aspect-ratio: 3 / 4; margin-top: 75px; }
+main img.third-photo { grid-column: 1; grid-row: 2; aspect-ratio: 2 / 3; }
+main img.fourth-photo { grid-column: 2; grid-row: 2; aspect-ratio: 3 / 4; margin-top: 80px; }
+main img.fifth-photo { grid-column: 1; grid-row: 3; aspect-ratio: 3 / 4; }
+main img.six-photo { grid-column: 2; grid-row: 3; aspect-ratio: 2 / 3; margin-top: 75px; }
+main img.seven-photo { grid-column: 1 / -1; grid-row: 4; width: 82%; justify-self: center; aspect-ratio: 4 / 3; }
+footer { position: static; top: auto; left: auto; margin: 0; padding: 12px 16px 32px; font-size: 13px; text-align: center; }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Rock+Salt&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="./profile.css">
+
+<title>Profile|Riku Komine</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="main-visual fade-trigger">
+            <h1>Riku Komine</h1>
+            <p>Web Designer/Student</p>
+        </div>
+        
+        <nav class="fade-trigger">
+            <ul>
+                <li><a href="../index.html">TOP</a></li>
+                <li><a href="/works/works.html">WORKS</a></li>
+                <li><a href="../contact/contact.html">CONTACT</a></li>
+            </ul>
+        </nav>      
+    </header>
+
+    <main>
+        <section class="about-me fade-trigger">
+        <h2>About Me</h2>
+
+        <div class="about-content">
+            <p>大学生として学びながら、Webデザイン・Web制作に挑戦しています。<br>
+これまで長く続けてきたサッカーを終え、新しい挑戦としてWebの世界へ。<br>
+現在はHTML/CSSを中心に、デザインからコーディングまで学んでいます。<br>
+まだ学び始めたばかりですが、自分のアイデアを形にできることに面白さを感じています。<br>
+このサイトも、そんな自分らしさを伝える場所として、一からデザイン・制作しました。</p>
+<img src="../images/hana.webp" alt="" class="profile1 tilt">
+        </div>
+        </section>
+
+        <section class="background fade-trigger">
+            <h2>BACKGROUND</h2>
+            <div class="bg-content">
+                <img src="../images/soccer-m.webp" alt="" class="profile2 tilt">
+                <p>高校3年間、全国大会出場を目標に本気でサッカーに打ち込んできました。<br>
+その経験から、一つの目標に向かってひたむきに努力し続ける生き方が好きになりました。<br>
+10年続けてきたサッカーを引退してからは、なんとなく大学に通う日々が続きました。<br>
+熱量を注げるものがないと気付き、もう一度本気で何かに挑戦したいと思いました。<br>
+新たな挑戦としてWebの世界に飛び込みました。</p>
+            </div>
+        </section>
+
+        <section class="mindset fade-trigger">
+            <h2>MINDSET</h2>
+            <p>結果が出ないときこそ、腐らず自分にベクトルを向けること。<br>
+環境や周りのせいにせず、自分に何ができるかを考え、行動する。<br>
+そして、何事にも圧倒的な自信を持って挑戦すること。<br>
+自信を持てるだけの努力を積み重ね、自分の可能性を自分自身が一番信じる。<br>
+サッカーで培ったこの姿勢を大切に、これからも新しい挑戦を続けていきます。</p>
+        </section>
+    </main>
+
+        <footer class="profile-footer fade-trigger">
+            <p>&copy;2026 Riku Komine</p>
+        </footer>
+        
+
+<script src="../vanilla-tilt.min.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".tilt"));
+</script>
+
+<script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script> 
+<script>
+const lenis = new Lenis({
+duration: 1.5,
+smoothWheel: true,
+});
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+</script>
+
+<script>
+const fadeElements = document.querySelectorAll(".fade-trigger");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in-fwd");
+        observer.unobserve(entry.target);
+    }
+    });
+}, {
+    threshold: 0.2
+});
+
+fadeElements.forEach((element) => {
+    observer.observe(element);
+});
+</script>
+</body>
+</html>
